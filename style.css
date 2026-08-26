@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f6ec;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+h3 span {
+  color: #ffffff;
+}
+.sidebar {
+  width: 270px;
+  background-color: #d4b084;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  font-size: 34px;
+  color: #5e412f;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.nav-links {
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 20px 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #fff;
+  background-color: #a98467;
+  padding: 10px 10px;
+  border-radius: 20px;
+  display: block;
+  text-align: left;
+  box-shadow: 0 0 5px rgb(255, 255, 255);
+}
+.nav-links .home {
+  padding-left: 50px;
+  background-image: url("Image/home.png");
+  background-repeat: no-repeat;
+  background-size: 30px 25px;
+  background-position: 7px center;
+}
+.nav-links .menu {
+  padding-left: 50px;
+  background-image: url("Image/menu.png");
+  background-repeat: no-repeat;
+  background-size: 25px 20px;
+  background-position: 7px center;
+}
+.nav-links .oder {
+  padding-left: 50px;
+  background-image: url("Image/approved.png");
+  background-repeat: no-repeat;
+  background-size: 30px 21px;
+  background-position: 7px center;
+}
+.nav-links .history {
+  padding-left: 50px;
+  background-image: url("Image/file.png");
+  background-repeat: no-repeat;
+  background-size: 28px 20px;
+  background-position: 7px center;
+}
+.nav-links .stock {
+  padding-left: 50px;
+  background-image: url("Image/ready-stock.png");
+  background-repeat: no-repeat;
+  background-size: 35px 23px;
+  background-position: 7px center;
+}
+.nav-links .setting {
+  padding-left: 50px;
+  background-image: url("Image/setting.png");
+  background-repeat: no-repeat;
+  background-size: 30px 20px;
+  background-position: 7px center;
+}
+.logout .exit {
+  padding-left: 50px;
+  background-image: url("Image/exit.png");
+  background-repeat: no-repeat;
+  background-size: 30px 20px;
+  background-position: 7px center;
+}
+.nav-links a:hover {
+  background-color: #7d5f49;
+  font-size: 18px;
+}
+
+.logout a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #fff;
+  background-color: #7e4f2d;
+  padding: 10px 40px;
+  border-radius: 20px;
+  display: block;
+  text-align: center;
+  margin-top: 150px;
+  align-items: center;
+  box-shadow: 0 0 5px rgb(255, 255, 255);
+}
+.logout a:hover {
+  background-color: #7d5f49;
+  font-size: 18px;
+}
+.main-content {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f6ec;
+  padding: 50px;
+  background-image: url("Image/Screenshot\ 2024-10-20\ 150629.png"); /* Example background, replace with coffee-themed one */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1300px;
+}

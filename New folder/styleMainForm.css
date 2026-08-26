@@ -1,0 +1,535 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+html {
+  /* 62.5%​​ of 16px = 10px */
+  /* 1rem = 10px */
+  font-size: 62.5%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  /* background-color: rgb(216, 216, 216); */
+}
+.MainGrid1x2 {
+  /* max-width: 100%;
+  height: 922px; */
+  /* max-height: 100%; */
+  /* margin: 0 auto; */
+  /* display: grid;
+  grid-template-columns: 18% 60% 22%; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-left {
+  width: 18%;
+}
+.nav-middle {
+  width: 60%;
+}
+.nav-right {
+  width: 22%;
+}
+/* ............................................... */
+
+/* ............Left-Section...........  */
+.left-container {
+  position: fixed;
+  border-right: 0.2rem solid grey;
+  height: 100%;
+  padding: 2rem;
+  /* background-color: antiquewhite; */
+  background-color: white;
+}
+.header-text {
+  color: transparent;
+  font-size: 3rem;
+  text-align: center;
+  margin-top: 1rem;
+  background-image: linear-gradient(
+    to right,
+    rgb(125, 20, 20),
+    rgb(88, 82, 82)
+  );
+  -webkit-background-clip: text;
+}
+
+.left-menu-container {
+  margin-top: 4rem;
+}
+
+.menu-wrapper {
+  cursor: pointer;
+  display: flex;
+  /* background-color: bisque; */
+  align-items: center;
+  gap: 3rem;
+  padding: 1rem 2rem;
+  margin-bottom: 1.5rem;
+  border-radius: 5rem;
+  border: 0.2rem solid grey;
+  transition: all 0.2s ease-in-out;
+}
+
+.menu-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.left-logout {
+  cursor: pointer;
+  display: flex;
+  background-color: rgb(183, 121, 6);
+  font-size: 1.5rem;
+  font-weight: bold;
+  gap: 2rem;
+  padding: 1.5rem 2rem;
+  border-radius: 5rem;
+  border: 0.2rem solid white;
+  align-items: center;
+  margin-top: 10rem;
+}
+/* ............End of Left-Section...........  */
+
+/* ............middle-Section...........  */
+
+.middle-container {
+  height: 100%;
+  /* background-color: rgb(216, 216, 216); */
+  padding: 2rem 5rem;
+  /* border-right: 0.2rem solid gray; */
+}
+.search-filter-wraper {
+  display: flex;
+}
+
+.search-container {
+  border: 0.1rem solid grey;
+  width: 300px;
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  background-color: rgb(251, 251, 249);
+  padding: 1rem;
+  border-radius: 25px;
+
+  z-index: 2;
+  /* justify-content: center; */
+}
+
+.search-image {
+  width: 35px;
+}
+.search-text {
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+.search-text::placeholder {
+  color: rgb(19, 18, 18);
+}
+.filter-container {
+  width: 100px;
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  background-color: rgb(183, 121, 6);
+  padding: 1rem;
+  border-radius: 25px;
+  margin-left: -5rem;
+  z-index: 10;
+  right: 0;
+}
+.filter-image {
+  width: 21px;
+}
+.filter-text {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-size: 1.5rem;
+}
+.category-container {
+  padding-bottom: 2rem;
+  /* background-color: antiquewhite; */
+  position: sticky;
+  top: 0;
+  border-top: 0.2rem solid gray;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.category-btn-container {
+  display: flex;
+  /* flex-wrap: wrap;
+  flex-direction: column; */
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.categorybtn {
+  padding: 0.3rem 2rem 0.3rem 1.5rem;
+  font-size: 2rem;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  /* text-align: left; */
+  transition: all 0.1s ease-out;
+  font-weight: bold;
+  background-color: rgb(216, 216, 216);
+}
+.categorybtn:hover {
+  background-color: bisque;
+}
+.categorybtn.active {
+  background-color: rgb(183, 121, 6);
+  color: white;
+}
+.menu-cafee-text {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.card-container {
+  margin-top: 2rem;
+}
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.card-wraper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border: 0.2rem solid grey;
+  padding: 1rem;
+  border-radius: 10px;
+  display: flex;
+  gap: 1rem;
+  width: 240px;
+}
+.image-qty-wraper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+}
+.image-card {
+  max-width: 150px;
+  background-color: rgb(216, 216, 216);
+  border-radius: 10px;
+  padding: 1rem 0.5rem;
+}
+
+.image-card > img {
+  width: 100%;
+}
+.qty-wraper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.btn {
+  background-color: rgb(216, 216, 216);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  padding: 0.3rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: 0.2rem solid grey;
+}
+.number {
+  font-size: 1.5rem;
+}
+
+.description-wraper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: center;
+}
+.name-price-wraper {
+  display: flex;
+  gap: 1rem;
+}
+.name,
+.price {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+.price {
+  color: rgb(183, 121, 6);
+}
+.size {
+  display: flex;
+  gap: 0.7rem;
+}
+
+.btnSize {
+  width: 60px;
+  padding: 0.2rem 0.7rem;
+  border-radius: 10px;
+  background-color: rgb(216, 216, 216);
+  border: 0.2px solid grey;
+  cursor: pointer;
+}
+.btnSize:hover {
+  font-weight: bold;
+}
+
+.btnaddtocard {
+  background-color: bisque;
+  width: 100px;
+  padding: 0.5rem 1rem;
+  border-radius: 15px;
+  border: 0.2px solid grey;
+  cursor: pointer;
+}
+.btnaddtocard:hover {
+  font-weight: bold;
+}
+
+/* ............end of middle-Section........... */
+
+.right-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: fixed;
+  border-left: 0.2rem solid gray;
+  padding: 1.5rem;
+  /* height: 100%; */
+  /* background-color: rgb(216, 216, 216); */
+  background-color: white;
+}
+.profile {
+  display: flex;
+
+  justify-content: space-around;
+  align-items: center;
+  gap: 7rem;
+  border-bottom: 0.2rem solid grey;
+  padding-bottom: 2rem;
+}
+
+.image-profile {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+  overflow: hidden;
+}
+.image-profile > img {
+  width: 100%;
+  height: 100%;
+}
+.name {
+  font-weight: bold;
+}
+.image-nameemail-wraper {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+.name-email-wraper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.optionImage {
+  width: 50px;
+  height: 50px;
+  outline: none;
+  border: none;
+  overflow: hidden;
+}
+
+.optionImage > img {
+  width: 100%;
+  height: 100%;
+}
+.car-ordercode-wraper {
+  display: flex;
+  gap: 7rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+.card {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.orderCode {
+  font-size: 1rem;
+  color: grey;
+}
+.btnSolution_wraper {
+  margin-top: 2rem;
+  display: flex;
+  gap: 0.5rem;
+}
+.btnSolution {
+  padding: 0.3rem 2rem 0.3rem 1.5rem;
+  font-size: 1.5rem;
+  border-radius: 15px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  /* text-align: left; */
+  transition: all 0.1s ease-out;
+  /* font-weight: bold; */
+  background-color: rgb(216, 216, 216);
+}
+
+.btnSolution:hover {
+  background-color: bisque;
+}
+.btnSolution.active {
+  background-color: rgb(183, 121, 6);
+  color: white;
+}
+.order-wraper {
+  margin-top: 1rem;
+}
+.order-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  /* border: 0.2rem solid grey; */
+  padding: 1rem;
+  /* border-radius: 10px; */
+  display: flex;
+  gap: 1rem;
+  width: 240px;
+  border-bottom: 0.2rem solid grey;
+}
+.orderImage {
+  max-width: 70px;
+  background-color: rgb(216, 216, 216);
+  border-radius: 10px;
+  padding: 1rem 0.5rem;
+}
+
+.orderImage > img {
+  width: 100%;
+}
+
+.nameorder {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.sizeorder {
+  color: grey;
+}
+.name-size-wraper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.order-description {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.price-qty-wraper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.qtyorder-wraper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.priceOrder {
+  font-size: 1.5rem;
+}
+.btnorder {
+  background-color: rgb(216, 216, 216);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  padding: 0.3rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  border: 0.2rem solid grey;
+}
+.numberOrder {
+  font-size: 1.5rem;
+}
+.item-price-wraper {
+  margin-top: 2rem;
+  padding-right: 5rem;
+  display: flex;
+  justify-content: space-between;
+}
+.itemORDER {
+  font-size: 1.5rem;
+  color: grey;
+}
+.priceORDER {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+.discount-price-wraper {
+  margin-top: 2rem;
+  padding-right: 5rem;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+  border-bottom: 0.2rem solid grey;
+}
+.discountORDER {
+  font-size: 1.5rem;
+  color: grey;
+}
+.pricediscountORDER {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.total-price-wraper {
+  margin-top: 2rem;
+  padding-right: 5rem;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+}
+.totalORDER {
+  font-size: 1.5rem;
+  color: grey;
+}
+.pricetotalORDER {
+  color: goldenrod;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.pay {
+  background-color: bisque;
+  padding: 1rem 2rem;
+  border-radius: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 1.5rem;
+}
+/* ............right-Section...........  */

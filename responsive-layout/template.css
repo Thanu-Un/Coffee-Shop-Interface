@@ -1,0 +1,188 @@
+* { 
+    margin: 0; padding: 0; box-sizing: border-box; 
+    transition: all ease-in-out 500ms;
+}
+body { padding: 10px; font-family: sans-serif; letter-spacing: 1px; }
+#wrapper { display: flex; gap: 10px; justify-content: space-between; }
+#left { width: 25%; padding: 5px; background-color: #bd6b2e;  }
+#left h1 {
+    color: white; text-transform: uppercase;
+    font-size: 22px; text-align: center;
+    padding: 10px 8px; background-color: brown;
+    border-top: 2px solid #fff;
+    border-bottom: 2px solid #fff;
+}
+#left nav ul {
+    display: flex; justify-content: center; flex-wrap: wrap;
+    margin: 20px 0;
+}
+#left nav ul li {
+    list-style-type: none;
+    color: white;
+}
+#left nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    margin: 0 10px;
+    position: relative;
+}
+#left nav ul li a::before {
+    content: "";
+    width: 0%;
+    height: 2px; 
+    background-color: white;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    transition: all ease-in-out 500ms;
+}
+#left nav ul li:hover a::before {
+    width: 100%;
+}
+
+
+#left .links { padding: 5px; background-color: #ffdaa9; margin-top: 20px; }
+#left .links h3 {
+    color: yellow; background-color: #935121;
+    font-size: 17px; padding: 8px; text-align: center; margin-bottom: 5px;
+} 
+#left .links ul { padding: 5px; background-color: #f6a262; } 
+#left .links ul li{ list-style-type: none;  border-bottom: 5px solid #f6a262; }
+#left .links ul li:last-child{ list-style-type: none;  border-bottom: none; }
+#left .links ul li a{
+    text-decoration: none; font-size: 18px; display: block;
+    color: brown; background-color: #ffb74e; padding: 7px 13px;
+}
+#left .links ul li a:hover{  color: white; background-color: orange; }
+
+#right { width: 75%; padding: 0; background-color: #ededed; }
+#right #rightHeader {
+    height: 60px; display: flex; justify-content: center;
+    align-items: center; position: relative;
+    background-image: linear-gradient(to bottom, #bd6b2e, brown);
+}
+#right #rightHeader h1 {
+    color: white; font-size: 22px; text-align: center;
+}
+#pagination {
+    text-align: center; padding: 10px; 
+    background-color: white; 
+    border-top: 1px solid grey;               
+    border-bottom: 1px solid grey;
+}
+#right .row {
+    display: flex; gap: 10px; padding: 10px 5px;
+}
+
+#right .row .checkbox { width: 5%; }
+#right .row .id { width: 7%; }
+#right .row .categoryName { width: 20%; }
+#right .row .icon { width: 10%; }
+#right .row .icon img { width: 30px; }
+#right .row .description { width: 40%;  }
+#right .row .edit { width: 7%;   }
+#right .row .delete { width: 11%;  }
+#right div.row.rowHead {
+    padding: 15px 5px !important; background-color: #ffb74e !important;
+    font-size: 18px !important; font-weight: bold;
+}
+
+/* Start Hamburger Menu Block */
+#hamburgerMenu {
+    position: absolute; display: none;
+    left: 0; top: 0; width: 100%;
+}
+#hamburgerMenu input[type="checkbox"]{
+    display: none;
+}
+
+#hamburgerMenu input[type="checkbox"] + label {
+    width: 50px; height: 40px; display: block;
+   text-align: center;
+    border: 1px dashed black; position: relative; cursor: pointer;
+    top: 10px; left: 10px; z-index: 300;
+}
+#hamburgerMenu input[type="checkbox"]:checked + label{
+    background-color: transparent !important;
+}
+#hamburgerMenu input[type="checkbox"] + label .line1, 
+#hamburgerMenu input[type="checkbox"] + label .line2, 
+#hamburgerMenu input[type="checkbox"] + label .line3 {
+    position: absolute; height: 2px; background-color: white;
+    border-radius: 5px; z-index: 100; width: 70%; left: 7px;
+} 
+#hamburgerMenu input[type="checkbox"] + label .line1 {
+    top: 8px;
+}
+#hamburgerMenu input[type="checkbox"] + label .line2 {
+    top: 18px;
+}
+#hamburgerMenu input[type="checkbox"] + label .line3 {
+    top: 28px;
+}
+#hamburgerMenu input[type="checkbox"]:checked + label .line1 {
+    transform: rotate(135deg); top: 18px;
+}
+#hamburgerMenu input[type="checkbox"]:checked + label .line2 {
+    opacity: 0; transform: rotate(135deg);
+}
+#hamburgerMenu input[type="checkbox"]:checked + label .line3 {
+    transform: rotate(-135deg); top: 18px;
+}
+#hamburgerMenu input[type="checkbox"] ~ #allLinks{
+    position: absolute; z-index: 200; left: 0; width: 100%; top: 0;
+    transition: all ease-in-out 500ms; height: 0; overflow: hidden;
+}
+#hamburgerMenu input[type="checkbox"]:checked ~ #allLinks{
+     height: 400px;
+}
+#hamburgerMenu input[type="checkbox"] ~ #allLinks .links {
+    width: 30%; padding: 5px; background-color: #ffdaa9;
+}
+#hamburgerMenu input[type="checkbox"] ~ #allLinks .links h3 {
+    color: yellow; background-color: #935121;
+    font-size: 17px; padding: 8px; text-align: center;
+    margin-bottom: 5px;
+} 
+#hamburgerMenu input[type="checkbox"] ~ #allLinks .links ul {
+    padding: 5px; background-color: #f6a262;
+} 
+#hamburgerMenu input[type="checkbox"] ~ #allLinks ul li{
+    list-style-type: none;  border-bottom: 5px solid #f6a262;
+}
+#hamburgerMenu input[type="checkbox"] ~ #allLinks ul li:last-child{
+    list-style-type: none;  border-bottom: none;
+}
+#hamburgerMenu input[type="checkbox"] ~ #allLinks ul li a{
+    text-decoration: none; font-size: 18px; display: block;
+    color: brown; background-color: #ffb74e;
+    padding: 7px 13px;
+}
+#hamburgerMenu input[type="checkbox"] ~ #allLinks ul li a:hover{
+    color: white; background-color: orange;
+}
+#hamburgerMenu input[type="checkbox"] ~ #allLinks .spacer {
+    display: flex; justify-content: space-evenly;  gap: 20px;
+    background-color: #bd6b2e; padding: 20px 20px 20px 70px;
+}
+/* End Hamburger Menu Block */
+
+
+@media all and (max-width: 900px) {
+    #left { width: 35%; }
+    #right { width: 65%; }
+    #right .row .id { width: 12%; }
+    #right .row .categoryName { width: 30%; }
+    #right .row .icon { width: 15%; }
+    #right .row .icon img { width: 40px; }
+    #right .row .description { display: none;  }
+    #right .row .edit { width: 12%;   }
+    #right .row .delete { width: 16%;  }
+}
+@media all and (max-width: 700px) {
+    #left { display: none; }
+    #hamburgerMenu { display: block; }
+    #right { width: 100%; }
+}

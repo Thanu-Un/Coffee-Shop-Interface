@@ -1,0 +1,426 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  font-family: Arial, sans-serif;
+  background-color: white;
+  box-shadow: 0 0 5px rgb(255, 255, 255);
+}
+h2 {
+  color: #ffb300;
+}
+h2 span {
+  margin-left: 10px;
+  padding-top: 5px;
+  color: rgb(157, 112, 0);
+}
+h3 span {
+  color: #ffffff;
+}
+.header {
+  background-color: #fa9a25;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  padding: 2rem 7%;
+  margin-left: 190px;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  z-index: 100;
+  transition: 0.5s;
+}
+
+.sidebar {
+  position: fixed;
+  width: 270px;
+  background-color: #d4b084;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.logo {
+  font-size: 34px;
+  color: #5e412f;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.nav-links {
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 20px 0;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #fff;
+  background-color: #a98467;
+  padding: 10px 10px;
+  border-radius: 20px;
+  display: block;
+  text-align: left;
+  box-shadow: 0 0 5px rgb(255, 255, 255);
+}
+
+.nav-links a:hover {
+  background-color: #7d5f49;
+  font-size: 18px;
+}
+.logout a {
+  text-decoration: none;
+  font-size: 18px;
+  color: #fff;
+  background-color: #7e4f2d;
+  padding: 10px 40px;
+  border-radius: 20px;
+  display: block;
+  text-align: center;
+  margin-top: 150px;
+  align-items: center;
+  box-shadow: 0 0 5px rgb(255, 255, 255);
+}
+.logout a:hover {
+  background-color: #997154;
+  font-size: 18px;
+}
+
+.brand {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+.nav-menu {
+  list-style: none;
+  width: 100%;
+}
+
+.nav-menu li {
+  margin: 10px 0;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+.nav-links .home {
+  padding-left: 50px;
+  background-image: url("Image/home.png");
+  background-repeat: no-repeat;
+  background-size: 30px 25px;
+  background-position: 7px center;
+}
+.nav-links .menu {
+  padding-left: 50px;
+  background-image: url("Image/menu.png");
+  background-repeat: no-repeat;
+  background-size: 25px 20px;
+  background-position: 7px center;
+}
+.nav-links .oder {
+  padding-left: 50px;
+  background-image: url("Image/approved.png");
+  background-repeat: no-repeat;
+  background-size: 30px 21px;
+  background-position: 7px center;
+}
+.nav-links .history {
+  padding-left: 50px;
+  background-image: url("Image/file.png");
+  background-repeat: no-repeat;
+  background-size: 28px 20px;
+  background-position: 7px center;
+}
+.nav-links .stock {
+  padding-left: 50px;
+  background-image: url("Image/ready-stock.png");
+  background-repeat: no-repeat;
+  background-size: 35px 23px;
+  background-position: 7px center;
+}
+.nav-links .setting {
+  padding-left: 50px;
+  background-image: url("Image/setting.png");
+  background-repeat: no-repeat;
+  background-size: 30px 20px;
+  background-position: 7px center;
+}
+.logout .exit {
+  padding-left: 50px;
+  background-image: url("Image/exit.png");
+  background-repeat: no-repeat;
+  background-size: 30px 20px;
+  background-position: 7px center;
+}
+.nav-menu a:hover {
+  background-color: #b47c50;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  background-color: #e8e4db;
+  margin-left: 260px;
+  margin-top: 80px;
+}
+
+.category:hover {
+  background-color: #f2b245;
+  color: white;
+  font-size: 18px;
+}
+.categories {
+  display: flex;
+  gap: 15px;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 100px;
+}
+.category.active {
+  background-color: #fec769;
+  color: rgb(255, 255, 255);
+}
+.category {
+  border: none;
+  background-color: #f8f8f8;
+  padding: 8px 25px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 18px;
+  box-shadow: 0 0 3px rgb(0, 0, 0);
+}
+.category a {
+  text-decoration: none;
+  color: black;
+}
+.menu-items {
+  gap: 5px;
+  display: flex;
+}
+.menu-item {
+  background-color: rgb(200, 196, 196);
+  border-radius: 15px;
+  padding: 15px;
+  text-align: center;
+  width: 280px;
+  height: 170px;
+  box-shadow: 0 0 3px rgb(255, 255, 255);
+}
+
+.menu-item img {
+  width: 90px;
+  height: 110px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  margin-right: 210px;
+  margin-left: 0px;
+  background-color: rgb(209, 209, 209);
+  border-radius: 10px;
+  box-shadow: 0 0 3px rgb(255, 255, 255);
+}
+.menu-item h3 {
+  margin-left: 80px;
+  margin-top: -120px;
+  margin-right: -10px;
+}
+.button-controls button {
+  margin-left: 65px;
+  margin-right: -50px;
+  padding: 5px 8px;
+  background-color: #ababab;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+.button-controls button:hover {
+  background-color: #efba58;
+  color: white;
+}
+.size-buttons {
+  color: black;
+}
+.size-buttons button {
+  color: rgb(0, 0, 0);
+  box-shadow: 0 0 3px rgb(255, 255, 255);
+}
+.quantity-controls {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+  margin-top: 50px;
+}
+
+.quantity-controls button {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 5px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 18px;
+  margin-left: -5px;
+}
+
+.quantity-controls button:hover {
+  background-color: #efba58;
+  color: white;
+}
+.quantity-controls span {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 5px 15px;
+  border-radius: 10%;
+  margin-left: -5px;
+}
+.quantity-controls {
+  margin-top: -30px;
+  margin-left: 0px;
+}
+.menu-items .add-to-cart {
+  background-color: #f2b245;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  margin-left: 130px;
+  margin-top: 20px;
+}
+
+.add-to-cart:hover {
+  background-color: #c68100;
+}
+.cart {
+  width: 360px;
+  padding: 20px;
+  background-color: #a6936c;
+  border-left: 1px solid #ccc;
+  position: fixed;
+  margin-left: 1150px;
+}
+
+.cart h3 {
+  margin-bottom: 20px;
+}
+
+.cart-items {
+  list-style: none;
+  margin-bottom: 20px;
+  background-color: rgb(173, 173, 173);
+  border-radius: 10px;
+  height: 80px;
+  box-shadow: 0 0 5px rgb(255, 255, 255);
+}
+
+.cart-items li {
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  margin-right: 40px;
+}
+
+.cart-items img {
+  margin-left: 10px;
+  width: 50px;
+  height: 70px;
+  object-fit: cover;
+  background-color: rgb(209, 209, 209);
+  border-radius: 5px;
+  box-shadow: 0 0 3px rgb(150, 150, 150);
+  margin-top: 5px;
+}
+.cart-items nav {
+  padding-top: -30px;
+  padding-bottom: 28px;
+}
+.quantitei-controls {
+  margin-bottom: -15px;
+  margin-right: -25px;
+}
+.quantitei-controls span {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  border: none;
+  padding: 4px 17px;
+  border-radius: 7px;
+}
+.quantitei-controls button:hover {
+  background-color: #f2b245;
+  color: #ffffff;
+}
+.cart-summary {
+  border-top: 1px solid #ccc;
+  padding-top: 10px;
+  color: white;
+}
+
+.print-bills {
+  background-color: #ed9923;
+  color: #ffffff;
+  padding: 10px 50px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-left: 100px;
+  font-family: sans-serif Impact, "Arial Narrow Bold";
+  font-size: 18px;
+}
+
+.print-bills:hover {
+  background-color: #f2b245;
+  color: #fff;
+}
+ul p {
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding-top: 4px;
+  margin-left: 70px;
+  margin-top: -40px;
+  background-color: #9c9c9c;
+  width: 60px;
+  height: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 3px rgb(255, 255, 255);
+}
+
+.quantitei-controls button {
+  background-color: white;
+  color: black;
+  border: none;
+  padding: 5px 8px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.categories {
+  position: fixed;
+  margin-left: 270px;
+  width: 881px;
+  padding: 40px 20px 20px 30px;
+  background: transparent;
+  align-items: center;
+  z-index: 100;
+  transition: 0.5s;
+  margin-top: -20px;
+}
+.categories {
+  background-color: #e8e4db;
+}

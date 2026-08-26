@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Online Sale Product" />
+    <meta name="keywords" content="HTML, CSS, JavaScrip,..." />
+    <meta property="og:title" content="Online website" />
+    <meta
+      property="og:image"
+      content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReCNXA0ZK1JCmNQMDF1ayhyp3US04HK0RA_Q&s"
+    />
+    <meta property="url" content="http://www.thanu.com" />
+
+    <title>MainForm</title>
+    <link rel="stylesheet" href="styleMainForm.css" />
+    <script
+      src="https://kit.fontawesome.com/f9f187c8eb.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <section class="MainGrid1x2">
+      <!-- ............Left-Section........... -->
+      <nav class="nav-left">
+        <div class="left-container">
+          <div class="header-text"><h1>Thanuu'Cafee</h1></div>
+          <div class="left-menu-container">
+            <div class="menu-wrapper">
+              <span class="menu-image">
+                <img src="./Image/home.png" alt="" />
+              </span>
+              <span class="menu-text">Home Page</span>
+            </div>
+
+            <div class="menu-wrapper">
+              <span class="menu-image">
+                <img src="./Image/menu.png" alt="" />
+              </span>
+              <span class="menu-text">Menu</span>
+            </div>
+
+            <div class="menu-wrapper">
+              <span class="menu-image">
+                <img src="./Image/approved.png" alt="" />
+              </span>
+              <span class="menu-text">My Orders</span>
+            </div>
+
+            <div class="menu-wrapper">
+              <span class="menu-image">
+                <img src="./Image/ready-stock.png" alt="" />
+              </span>
+              <span class="menu-text">Stock</span>
+            </div>
+
+            <div class="menu-wrapper">
+              <span class="menu-image">
+                <img src="./Image/setting.png" alt="" />
+              </span>
+              <span class="menu-text">Setting</span>
+            </div>
+          </div>
+          <div class="left-logout active">
+            <span class="left-logout-image">
+              <img src="./Image/exit.png" alt="" />
+            </span>
+            <span class="left-logout-text">Log Out</span>
+          </div>
+        </div>
+      </nav>
+      <!-- ............End ofLeft-Section........... -->
+
+      <!-- ............middl-Section........... -->
+
+      <nav class="nav-middle">
+        <div class="middle-container">
+          <section class="search-filter-wraper">
+            <div class="search-container">
+              <img class="search-image" src="./Image/download.png" alt="" />
+              <input type="text" placeholder="Search...." class="search-text" />
+            </div>
+
+            <div class="filter-container">
+              <img class="filter-image" src="./Image/filter.png" alt="" />
+              <p class="filter-text">Filter</p>
+            </div>
+          </section>
+
+          <section class="category-container">
+            <div class="category-btn-container">
+              <button class="categorybtn active" data-id="all">All</button>
+              <button class="categorybtn" data-id="caffe">Caffe</button>
+              <button class="categorybtn" data-id="drink">Drink</button>
+              <button class="categorybtn" data-id="snack">Snack</button>
+              <button class="categorybtn" data-id="food">Food</button>
+              <button class="categorybtn" data-id="dessert">Dessert</button>
+            </div>
+          </section>
+
+          <span class="menu-cafee-text">Caffe Menu</span>
+
+          <section class="card-container">
+            <div class="card-wraper">
+              <div class="image-qty-wraper">
+                <span class="image-card"
+                  ><img src="./Image/Coffee/images_2.png" alt=""
+                /></span>
+                <span class="qty-wraper">
+                  <button class="btn decrease">-</button>
+                  <span class="number">0</span>
+                  <button class="btn increase">+</button>
+                </span>
+              </div>
+
+              <div class="description-wraper">
+                <span class="name-price-wraper">
+                  <p class="name">Ice Latte</p>
+                  <p class="price">$1.5</p>
+                </span>
+                <span class="text"
+                  >This Caffe is one of the most populur caffe in the
+                  world</span
+                >
+                <span class="size">
+                  <button class="btnSize medium">Medium</button>
+                  <button class="btnSize large">Large</button>
+                </span>
+                <button class="btnaddtocard">Add to card</button>
+              </div>
+            </div>
+          </section>
+        </div>
+      </nav>
+      <!-- ............end of middle-Section........... -->
+
+      <!-- ............right-Section........... -->
+
+      <nav class="nav-right">
+        <div class="right-container">
+          <section class="profile">
+            <span class="image-nameemail-wraper">
+              <div class="image-profile">
+                <img src="./Image/profile.jpg" alt="" />
+              </div>
+              <div class="name-email-wraper">
+                <p class="name">Thanutheb</p>
+                <p class="email">thanu2912@gamil.com</p>
+              </div>
+            </span>
+            <span class="optionImage"
+              ><img src="./Image/more.png" alt=""
+            /></span>
+          </section>
+
+          <section class="car-ordercode-wraper">
+            <p class="card">Card</p>
+            <p class="orderCode">Order #3243</p>
+          </section>
+
+          <section class="btnSolution_wraper">
+            <button class="btnSolution active">Delivery</button>
+            <button class="btnSolution">Dine in</button>
+            <button class="btnSolution">Take away</button>
+          </section>
+
+          <section class="order-wraper">
+            <div class="order-card">
+              <span class="orderImage"
+                ><img src="./Image/Coffee/6.png" alt=""
+              /></span>
+
+              <span class="order-description">
+                <div class="name-size-wraper">
+                  <p class="nameorder">Ice Latte</p>
+                  <p class="sizeorder">small-200g</p>
+                </div>
+
+                <div class="price-qty-wraper">
+                  <div class="priceOrder">$05.50</div>
+                  <span class="qtyorder-wraper">
+                    <button class="btnorder decreaseorder">-</button>
+                    <span class="numberOrder">0</span>
+                    <button class="btnorder increaseorder">+</button>
+                  </span>
+                </div>
+              </span>
+            </div>
+
+            <div class="order-card">
+              <span class="orderImage"
+                ><img src="./Image/Coffee/6.png" alt=""
+              /></span>
+
+              <span class="order-description">
+                <div class="name-size-wraper">
+                  <p class="nameorder">Hot Latte</p>
+                  <p class="sizeorder">small-200g</p>
+                </div>
+
+                <div class="price-qty-wraper">
+                  <div class="priceOrder">$05.00</div>
+                  <span class="qtyorder-wraper">
+                    <button class="btnorder decrease">-</button>
+                    <span class="numberOrder">0</span>
+                    <button class="btnorder increase">+</button>
+                  </span>
+                </div>
+              </span>
+            </div>
+          </section>
+
+          <section class="item-price-wraper">
+            <p class="itemORDER">Items</p>
+            <p class="priceORDER">$10.50</p>
+          </section>
+
+          <section class="discount-price-wraper">
+            <p class="discountORDER">Discounts</p>
+            <p class="pricediscountORDER">$03.00</p>
+          </section>
+
+          <section class="total-price-wraper">
+            <p class="totalORDER">Total</p>
+            <p class="pricetotalORDER">$07.50</p>
+          </section>
+
+          <button class="pay">Pay Now</button>
+        </div>
+      </nav>
+      <!-- ............end of right-Section........... -->
+    </section>
+
+    <!-- Navigation -->
+
+    <!-- Middle Section -->
+
+    <!-- Look Section -->
+
+    <!-- Product Section -->
+
+    <!--  End ofProduct Section -->
+
+    <!-- See next Section -->
+
+    <!-- End of See next Section -->
+
+    <!-- Footer Section -->
+
+    <!--End of Footer Section -->
+
+    <script src="scriptMainForm.js"></script>
+  </body>
+</html>

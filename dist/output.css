@@ -338,8 +338,14 @@
   .h-16 {
     height: calc(var(--spacing) * 16);
   }
+  .h-24 {
+    height: calc(var(--spacing) * 24);
+  }
   .h-32 {
     height: calc(var(--spacing) * 32);
+  }
+  .h-\[100dvh\] {
+    height: 100dvh;
   }
   .h-screen {
     height: 100vh;
@@ -955,6 +961,9 @@
     .lg\:flex {
       display: flex;
     }
+    .lg\:h-\[100dvh\] {
+      height: 100dvh;
+    }
     .lg\:h-auto {
       height: auto;
     }
@@ -1040,6 +1049,12 @@
     }
   }
   @media (width >= 80rem) {
+    .xl\:hidden {
+      display: none;
+    }
+    .xl\:h-\[100dvh\] {
+      height: 100dvh;
+    }
     .xl\:h-screen {
       height: 100vh;
     }

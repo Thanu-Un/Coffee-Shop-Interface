@@ -297,6 +297,35 @@
     </aside>
     </div>
   </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const buttons = document.querySelectorAll("button");
+      buttons.forEach(btn => {
+        if (btn.textContent.trim() === "-") {
+          const decreaseBtn = btn;
+          const countSpan = decreaseBtn.nextElementSibling;
+          
+          if (countSpan && countSpan.tagName === "SPAN") {
+            const increaseBtn = countSpan.nextElementSibling;
+            if (increaseBtn && increaseBtn.tagName === "BUTTON" && increaseBtn.textContent.trim() === "+") {
+              let count = parseInt(countSpan.textContent) || 1;
+              decreaseBtn.addEventListener("click", () => {
+                if (count > 1) {
+                  count--;
+                  countSpan.textContent = count;
+                }
+              });
+              increaseBtn.addEventListener("click", () => {
+                count++;
+                countSpan.textContent = count;
+              });
+            }
+          }
+        }
+      });
+    });
+  </script>
 </body>
 
-</html>
+</html>\n
